@@ -23,8 +23,6 @@ jobs:
           record: true
           group: 'UI - Chrome'
           spec: cypress/integration/e2e/*
-          gorup: 'API'
-          spec: cypress/integration/api/*
       - name: 'API Tests'
         uses: cypress-io/github-action@v2
         with:
