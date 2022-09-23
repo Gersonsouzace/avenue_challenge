@@ -4,15 +4,16 @@ describe('Carrinho de compras', ()=>{
         cy.visit('/')
     })
 
-    it.skip('Adicionar produno no carrinho', ()=>{
-        cy.get('#twotabsearchtextbox').type('portugues {enter}')
+    it
+    ('Adicionar produno no carrinho', ()=>{
+        cy.get('#twotabsearchtextbox').type('Sou péssimo em português {enter}')
         cy.get(".a-section .s-image").first().click()
         cy.get('#add-to-cart-button').click()
         cy.get('#sw-atc-details-single-container span').should('have.text', '\nAdicionado ao carrinho\n')
     })
 
     it('Adicionar 3 itens no carrinho e verificar o valor total', ()=>{
-        cy.get('#twotabsearchtextbox').type('Controle {enter}')
+        cy.get('#twotabsearchtextbox').type('Controle Dual Shock Usb Dazz 621322 {enter}')
         cy.get(".a-section .s-image").first().click()
         cy.get('#quantity').select('3')
         cy.get('#add-to-cart-button').click()
