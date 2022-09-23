@@ -25,6 +25,16 @@ jobs:
           spec: cypress/integration/e2e/*
           gorup: 'API'
           spec: cypress/integration/api/*
+      - name: 'API Tests'
+        uses: cypress-io/github-action@v2
+        with:
+          install-command: yarn install
+          wait-on: ${{ secrets.BASE_URL }}
+          wait-on-timeout: 120
+          browser: chrome
+          record: true
+          gorup: 'API'
+          spec: cypress/integration/api/*
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
