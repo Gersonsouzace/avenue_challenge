@@ -1,6 +1,7 @@
 {
     "baseUrl": "https://amazon.com.br",
     "viewportHeight":900,
-    "viewportWidth":1440
+    "viewportWidth":1440,
+    "projectId": "k7ngjq"
 
 }
