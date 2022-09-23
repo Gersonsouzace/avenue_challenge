@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      - name: 'Avenue challenge'
+      - name: 'UI Tests - Chrome'
         uses: cypress-io/github-action@v2
         with:
           install-command: yarn install
@@ -22,17 +22,7 @@ jobs:
           browser: chrome
           record: true
           group: 'UI - Chrome'
-          spec: cypress/integration/e2e/*
-      - name: 'API Tests'
-        uses: cypress-io/github-action@v2
-        with:
-          install-command: yarn install
-          wait-on: ${{ secrets.BASE_URL }}
-          wait-on-timeout: 120
-          browser: chrome
-          record: true
-          gorup: 'API'
-          spec: cypress/integration/api/*
+          spec: cypress/integration/*
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
