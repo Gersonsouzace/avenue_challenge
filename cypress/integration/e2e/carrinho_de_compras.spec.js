@@ -19,7 +19,7 @@ describe('Carrinho de compras', ()=>{
         cy.get('#add-to-cart-button').click()
         cy.get('#sw-gtc').click()
         cy.get('#sc-subtotal-label-activecart').should('have.text', '\n\n\n\n\n\n\n\n\nSubtotal  (3 itens):')
-        cy.get('#sc-subtotal-amount-activecart').should('contain', '177,84')
+        cy.get('#sc-subtotal-amount-activecart').should('contain', '178,59')
     })
 
 })
